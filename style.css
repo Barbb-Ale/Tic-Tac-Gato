@@ -1,0 +1,101 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white; 
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; 
+    display: grid; 
+    place-items: center;
+    overflow: hidden;
+
+}
+
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+#resultados {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    min-height: 2rem;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+#game .cell {
+    width: 90px;
+    height: 90px;
+    font-size: 3rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid purple;
+    float: left; 
+}
+
+#game {
+    width: 276px;
+    text-align: center;
+
+}
+
+#reiniciar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reiniciar:hover {
+    background-color: #9400d3;
+}
+
+.cell.bloqueada {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.cell {
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.cell.x, .cell.o {
+    color: #da70d6;
+    text-shadow:
+        0 0 5px #da70d6,
+        0 0 10px #da70d6,
+        0 0 20px #da70d6,
+        0 0 40px #9b30ff,
+        0 0 60px #ba55d3;
+    font-weight: bold;
+}
+
+#resultados {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    min-height: 2rem;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+}
+.oculto {
+    opacity: 0;
+}
